@@ -17,9 +17,9 @@ double [,] FellArray(int m, int n) {
     return TmpArray;
 }
 
-void PrintArray(double[,] Array, int m, int n) {
-    for (int i = 0; i < m; ++i) {
-        for (int j = 0; j < n; ++j) {
+void PrintArray(double[,] Array) {
+    for (int i = 0; i < Array.GetLength(0); ++i) {
+        for (int j = 0; j < Array.GetLength(1); ++j) {
             if (j != 0) Console.Write(" ");
             Console.Write($"{Array[i,j]}");
         }
@@ -36,4 +36,4 @@ int n = Convert.ToInt32(Console.ReadLine());
 
 double[,] Array = FellArray(m, n);
 
-PrintArray(Array, m, n);
+PrintArray(Array);
